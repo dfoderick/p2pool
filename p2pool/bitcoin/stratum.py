@@ -34,6 +34,7 @@ class StratumRPCMiningProvider(object):
         self.username = username.strip()
         
         reactor.callLater(0, self._send_work)
+        return True
 
     def rpc_configure(self, extensions, extensionParameters):
         #extensions is a list of extension codes defined in BIP310
